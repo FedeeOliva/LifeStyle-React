@@ -1,28 +1,25 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
 import {Provider} from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import store from './store';
+import Layout from './components/layout';
+import Home from './pages/home';
 
-function App() {
+
+function App() {  
   return (
-    <Provider store={store}>
-      <h1>Hola Mundo</h1>
-=======
-import {Provider} from 'react-redux';
-import store from './store';
-import Index from './components/index'
-
-import addProductsReducer from './reducers/addProductsReducer';
-function App() {
-  
-  return (
-    <Provider store={store}>
-      
-      <Index>
-       
-      </Index>
-
->>>>>>> beta
+    <Provider store={store}>      
+      <Layout>
+       	<Router>
+       		<Switch>
+       			<Route exact path='/' component={Home} />
+       		</Switch>
+       	</Router>
+      </Layout>
     </Provider>
   );
 }

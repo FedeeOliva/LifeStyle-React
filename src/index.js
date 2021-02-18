@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
 import './index.css';
-=======
->>>>>>> beta
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
